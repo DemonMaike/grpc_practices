@@ -35,6 +35,7 @@ python server.py
 
 ## ⚙️ Генерация Python-файлов из `.proto`
 
+Для bash
 ```bash
 python -m grpc_tools.protoc \
   -I api/grpc \
@@ -44,6 +45,7 @@ python -m grpc_tools.protoc \
   api/grpc/account/account.proto \
   api/grpc/order/order.proto
 ```
+Для powershell
 ```powershell
 python -m grpc_tools.protoc -I api/grpc --python_out=api/grpc/generated --grpc_python_out=api/grpc/generated api/grpc/client/client.proto api/grpc/account/account.proto api/grpc/order/order.proto
 ```
