@@ -1,0 +1,14 @@
+syntax = "proto3";
+package account;
+
+service AccountService {
+  rpc GetBalance (AccountRequest) returns (AccountReply);
+}
+
+message AccountRequest {
+  string client_id = 1;
+}
+
+message AccountReply {
+  double balance = 1;
+}
